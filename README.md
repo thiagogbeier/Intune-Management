@@ -12,7 +12,7 @@ That begged some questions:
 
 - Why is it showing this funky Name and nothing that correlates to the server where the connector is installed? 👈🏻For this I have the FIX 📃, please continue reading the article.
 
-[Screenshot1](Images/Picture1.png)
+<img src="Images/Picture1.png" width="600" />
 
 (Intune Certificate Connectors list)
 
@@ -20,8 +20,7 @@ A little bit of explanation and big thanks to [**Pedro Gonzalez Martinez**](http
 
 Every time the Intune Certificate Connector is installed in the device it creates a
 
-![A screenshot of a computer
-AI-generated content may be incorrect.](media/image2.png){width="6.5in" height="4.753472222222222in"}
+<img src="Images/Picture2.png" width="600" />
 
 ( Correlation between Intune Certificate Connector - Microsoft Intune ImportPFX Connector CA ssl certificate and Portal)
 
@@ -35,13 +34,11 @@ Get-ItemProperty -Path \"HKLM:\\SOFTWARE\\Microsoft\\MicrosoftIntune\\PFXCertifi
 
 ---
 
-![A screenshot of a computer
-AI-generated content may be incorrect.](media/image3.png){width="6.5in" height="4.134722222222222in"}
+<img src="Images/Picture3.png" width="600" />
 
 ( Microsoft Intune ImportPFX Connector CA ssl certificate Thumbprint )
 
-![A screenshot of a computer
-AI-generated content may be incorrect.](media/image4.png){width="6.5in" height="2.5743055555555556in"}
+<img src="Images/Picture4.png" width="600" />
 
 ( Intune Certificate Connector registry key information )
 
@@ -57,21 +54,20 @@ I managed to create a PowerShell Script that:
 
 _Server has no Intune Certificate Connector_
 
-![A screenshot of a computer
-AI-generated content may be incorrect.](media/image5.png){width="6.5in" height="1.5902777777777777in"}
+<img src="Images/Picture5.png" width="600" />
 
 (When there\'s no Intune Certificate Connector installed on the specific server)
 
 _Server has Intune Certificate Connector DisplayName up to date._
 
-![A screenshot of a computer program
-AI-generated content may be incorrect.](media/image6.png){width="6.5in" height="2.935416666666667in"}
+<img src="Images/Picture6.png" width="600" />
 
 (When there\'s Intune Certificate Connector installed on the server and its DisplayName is already up to date in Intune Portal / Graph API)\*\*
 
 _Server has Intune Certificate Connector and needs DisplayName to be updated to new Standard._
 
-![A screenshot of a computer screen
-AI-generated content may be incorrect.](media/image7.png){width="6.5in" height="2.5569444444444445in"}
+<img src="Images/Picture7.png" width="600" />
 
 (When there\'s Intune Certificate Connector installed on the server and its DisplayName requires to be updated)
+
+Powered by <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="24" />
