@@ -52,7 +52,7 @@ function Connect-ToMsGraph {
     if (-not (Get-MgContext)) {
         Write-Host "Connecting to Microsoft Graph..."
         try {
-            Connect-MgGraph -NoWelcome
+            Connect-ToMsGraph -NoWelcome
         }
         catch {
             Write-Error "Failed to connect: $_"
