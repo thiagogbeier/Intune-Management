@@ -70,7 +70,7 @@ function Update-IntuneConnectorDisplayName {
     param ()
 
     # Ensure the Microsoft Graph module is imported
-    Connect-ToMgGraph
+    Connect-ToMsGraph
 
     # Check for registry key
     $registryKey = Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\MicrosoftIntune\PFXCertificateConnector" -ErrorAction SilentlyContinue
