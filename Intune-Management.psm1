@@ -13,6 +13,8 @@ function Get-IntuneConnectorServices {
         Write-Host ""
         Write-Host "Intune Certificate Connector Services Status" -ForegroundColor Green
         $results | Format-Table -AutoSize
+    }    else {
+        Write-Warning "Intune Certificate Connector Services Status not found."
     }
 }
 
