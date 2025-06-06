@@ -1,7 +1,7 @@
 @{
     # Module manifest for module 'Intune-Management'
     RootModule        = 'Intune-Management.psm1'
-    ModuleVersion     = '0.1.0'
+    ModuleVersion     = '0.1.1'
     GUID              = 'f4c3b7e1-c3d2-4d1f-bffa-5a92f6dbf1e0'  # You can generate your own GUID if you want
     Author            = 'Thiago Beier'
     CompanyName       = 'BEIER IT'
