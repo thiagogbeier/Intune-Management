@@ -13,13 +13,14 @@ function Get-IntuneConnectorServices {
         Write-Host ""
         Write-Host "Intune Certificate Connector Services Status" -ForegroundColor Green
         $results | Format-Table -AutoSize
-    }    else {
+    }
+    else {
         Write-Warning "Intune Certificate Connector Services Status not found."
     }
 }
 
 # Ensure the Microsoft Graph module is imported
-function Connect-ToMgGraph {
+function Connect-ToMsGraph {
     [CmdletBinding()]
     param ()
 
