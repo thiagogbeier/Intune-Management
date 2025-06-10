@@ -63,6 +63,32 @@ function Connect-ToMsGraph {
     }
 }
 
+function Get-IntuneCertificateConnectorInfo {
+    [CmdletBinding()]
+    param ()
+
+    # Search for the connector
+    Write-Host "Searching for Certificate Connector for Microsoft Intune..."
+    $script:IntuneCertConnectorInfo = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* |
+    Where-Object { $_.DisplayName -eq "Certificate Connector for Microsoft Intune" } |
+    Select-Object DisplayName, DisplayVersion, Publisher, InstallDate
+
+    if ($script:IntuneCertConnectorInfo) {
+        Write-Verbose "Certificate Connector for Microsoft Intune found."
+    }
+    else {
+        Write-Verbose "Certificate Connector for Microsoft Intune not found."
+        $script:IntuneCertConnectorInfo = @()
+    }
+
+    return $script:IntuneCertConnectorInfo
+}
+
+
+# Example usage
+#Get-IntuneCertificateConnectorInfo
+
+# Now you can reuse $script:IntuneCertConnectorInfo in other functions or logic
 
 
 function Update-IntuneConnectorDisplayName {
