@@ -79,7 +79,8 @@ function Get-IntuneCertificateConnectorInfo {
     else {
         Write-Host "Certificate Connector for Microsoft Intune not found."
         $script:IntuneCertConnectorInfo = @()
-    } return $script:IntuneCertConnectorInfo
+    } 
+    return $script:IntuneCertConnectorInfo
 }
 
 
