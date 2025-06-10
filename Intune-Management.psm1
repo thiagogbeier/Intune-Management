@@ -74,14 +74,12 @@ function Get-IntuneCertificateConnectorInfo {
     Select-Object DisplayName, DisplayVersion, Publisher, InstallDate
 
     if ($script:IntuneCertConnectorInfo) {
-        Write-Verbose "Certificate Connector for Microsoft Intune found."
+        Write-Host "Certificate Connector for Microsoft Intune found."
     }
     else {
-        Write-Verbose "Certificate Connector for Microsoft Intune not found."
+        Write-Host "Certificate Connector for Microsoft Intune not found."
         $script:IntuneCertConnectorInfo = @()
-    }
-
-    return $script:IntuneCertConnectorInfo
+    } return $script:IntuneCertConnectorInfo
 }
 
 
